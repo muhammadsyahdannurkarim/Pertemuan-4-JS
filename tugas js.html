@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inner HTML</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      margin-top: 0;
+    }
+    .header {
+      background-color: aqua;
+      padding: 8px;
+    }
+    ul {
+      list-style-type: none;
+    }
+  </style>
+  <body>
+    <center>
+      <h2 class="header">Syahdan</h2>
+      <ul>
+        <li id="uppercase">Uppercase</li>
+        <li id="lowercase">Lowercase</li>
+        <li id="repleace">“Putih” menjadi “Muda”</li>
+        <li id="length">Panjang (length) dari variable teks</li>
+      </ul>
+    </center>
+  </body>
+  <script>
+    let teks = "Merah Putih";
+
+    let uppercase = document.getElementById("uppercase");
+    let isiuppercase = teks.toUpperCase();
+    uppercase.innerText = "Uppercase : " + isiuppercase;
+
+    let lowercase = document.getElementById("lowercase");
+    let isilowercase = teks.toLowerCase();
+    lowercase.innerText = "Lowercase : " + isilowercase;
+
+    let repleace = document.getElementById("repleace");
+    let isirepleace = teks.replace("Putih", "Muda");
+    repleace.innerText = "Repleace : " + isirepleace;
+
+    let length = document.getElementById("length");
+    let isilength = teks.length;
+    length.innerText = "Length : " + isilength;
+  </script>
+</html>
